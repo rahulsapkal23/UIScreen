@@ -9,17 +9,15 @@ import {
   TouchableOpacity,
   View
 } from 'react-native';
-// import CheckBox from 'react-native-check-box'
+
 import styles from './../styles/screen1';
 import Dash from 'react-native-dash';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import CheckBox from 'react-native-checkbox';
-// import ScrollableTabView, { ScrollableTabBar, } from
-// 'react-native-scrollable-tab-view';  import ScrollableTabView, {
-// DefaultTabBar, } from 'react-native-scrollable-tab-view';
+
 import ScrollableTabView, {ScrollableTabBar} from 'react-native-scrollable-tab-view';
 
-// import ScrollableTabView from 'react-native-scrollable-tab-view';
+
 var d = new Date();
 var datetext = d.toTimeString();
 datetext = datetext.split(' ')[0];
@@ -42,7 +40,7 @@ export default class screen1 extends Component {
     if (this.state.check === true) {
       this.setState({check: false});
     } else {
-      this.setState({check: false});
+      this.setState({check: true});
 
     }
   }
@@ -51,8 +49,8 @@ export default class screen1 extends Component {
     return (
       <View style={styles.VWcontainer}>
         <View style={styles.SWcontainer123}>
-          <TouchableOpacity style={styles.BtnContainer}>
-            <Text style={styles.BtnTxt}>Package</Text>
+          <TouchableOpacity style={styles.BtnContainer1111}>
+            <Text style={styles.BtnTxt1111}>Package</Text>
           </TouchableOpacity>
           <TouchableOpacity style={styles.BtnContainer1}>
             <Text style={styles.BtnTxt1}>increment</Text>

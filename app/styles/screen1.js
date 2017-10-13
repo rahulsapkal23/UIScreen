@@ -275,7 +275,7 @@ DateStyle123321: {
            marginTop:0,
                          flexDirection: 'row',
 
-       height:80,
+       height:100,
        width:"100%",
        
         // borderColor: 'black', borderWidth: 1,
@@ -289,6 +289,13 @@ DateStyle123321: {
     BtnTxt1: {
         padding:5,
         color: 'black',
+        alignItems: 'center',
+       
+        fontSize: 14
+    },
+    BtnTxt1111: {
+        padding:5,
+        color: 'white',
         alignItems: 'center',
        
         fontSize: 14
@@ -323,6 +330,18 @@ BtnContainer1: {
         width: 90
     },
     
+    BtnContainer1111: {
+        backgroundColor: 'rgba(61, 179, 250, 100)', 
+        borderColor: '#3DB3FA',
+
+        borderWidth: 1,
+        borderRadius: 20,
+        alignItems: 'center',
+       top:30,
+       left:50,
+        height: 32,
+        width: 90
+    },
         BtnContainer: {
         backgroundColor: 'rgba(61, 179, 250, 100)', 
         borderColor: '#3DB3FA',
