@@ -5,7 +5,7 @@ export default StyleSheet.create({
 
  VWcontainer: {
        
-        borderColor: 'blue', borderWidth: 1,
+        // borderColor: 'blue', borderWidth: 1,
         backgroundColor: 'white',
         //  flexDirection: 'row',
          flex:1
