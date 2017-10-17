@@ -136,6 +136,16 @@ export default StyleSheet.create({
         width:"100%"
         
     },
+     VWcontainerDay: {
+       flexDirection:"row",
+        // borderColor: 'blue', borderWidth: 1,
+         alignItems: 'center',
+        // left:10,
+        backgroundColor: 'white',
+        height:40,
+        
+        
+    },
        VWcontainer311: {
     //    flexDirection:"row",
 //  alignItems: 'center',
@@ -147,7 +157,7 @@ export default StyleSheet.create({
     },
          VWcontainer3: {
         alignItems: 'center',
-        left:120,
+        // left:120,
         // borderColor: 'pink', borderWidth: 1,
         backgroundColor: 'white',
         height:60,
@@ -156,18 +166,25 @@ export default StyleSheet.create({
     },
      VWcontainer7: {
         alignItems: 'center',
-        left:120,
-        
+        // left:120,
+       
         // borderColor: 'pink', borderWidth: 1,
-        backgroundColor: 'white',
+         backgroundColor: 'transparent',
+        // backgroundColor: 'white',
         height:150,
         width:"100%"
         
     },
+       Imgcontainer: {
+        alignItems: 'center',
+  
+    width: '100%'
+  },
          VWcontainer4: {
         alignItems: 'center',
         borderColor: 'rgba(243, 245, 249, 100)',  borderWidth: 1,
-        backgroundColor: 'white',
+        // backgroundColor: 'white',
+         backgroundColor: 'transparent',
         height:140,
         width:140,
         borderRadius:70,
@@ -177,7 +194,8 @@ export default StyleSheet.create({
       VWcontainer5: {
         alignItems: 'center',
         borderColor: 'rgba(242, 244, 249, 100)',  borderWidth: 1,
-        backgroundColor: 'white',
+        // backgroundColor: 'white',
+         backgroundColor: 'transparent',
         height:115,
         width:115,
         borderRadius:57.5,
@@ -202,13 +220,37 @@ export default StyleSheet.create({
 
      
     },
+     SWcontainerIMG: {
+         
+        // borderColor: 'black', borderWidth: 1,
+       height:170,
+        width:"100%",
+       
+       
+    },
+      SWcontainerBottom: {
+           flexDirection:'row',
+        //    top:100,
+       height:100,
+        width:"100%",
+        // borderColor: 'black', borderWidth: 1,
+       
+    },
        SWcontainer123: {
            flexDirection:'row',
         //    top:100,
        height:"70%",
         width:"100%",
-        // borderColor: 'black', borderWidth: 1,
+        borderColor: 'black', borderWidth: 1,
        
+    },
+     BtnTxtDayActive: {
+        color: 'white',
+        fontSize: 14
+    },
+      BtnTxtDay: {
+        color: 'rgba(164, 179, 202, 100)', 
+        fontSize: 14
     },
  BtnTxt: {
         color: 'white',
@@ -224,15 +266,49 @@ export default StyleSheet.create({
         width:"100%" ,height:0,  
     },
 
+      VWBtnContainer: {
+        // backgroundColor: 'rgba(61, 179, 250, 100)', 
+        borderColor: '#3DB3FA',
+        borderWidth: 8,
+        borderRadius: 1,
+        alignItems: 'center',
+       top:30,
+       marginLeft:5,
+        height: 40,
+        width: 120
+    },
         BtnContainer: {
         backgroundColor: 'rgba(61, 179, 250, 100)', 
         borderColor: '#3DB3FA',
-        borderWidth: 10,
+        borderWidth: 8,
         borderRadius: 20,
         alignItems: 'center',
        top:30,
        marginLeft:5,
-        height: 42,
+        height: 40,
         width: 120
+    },
+     BtnContainerDay: {
+        backgroundColor: 'white', 
+        borderColor: 'white',
+        borderWidth: 1,
+        borderRadius: 20,
+        alignItems: 'center',
+      
+    //    marginLeft:5,
+        height: 20,
+        width: 50
+    },
+       BtnContainerDayActive: {
+        backgroundColor: 'rgba(61, 179, 250, 100)', 
+        borderColor: '#3DB3FA',
+        borderWidth: 1,
+        borderRadius: 20,
+        alignItems: 'center',
+      
+    //    marginLeft:5,
+        height: 20,
+        width: 50
+       
     },
     });

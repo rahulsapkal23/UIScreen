@@ -1,0 +1,126 @@
+
+<!doctype html>
+<html>
+
+<head>
+    <title>Line Chart</title>
+    <script src="./Chart.bundle.js"></script>
+    <script src="./utils.js"></script>
+    <style>
+    canvas{
+        height: 85px;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select: none;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="content" style="height: 85px">
+		<div class="wrapper col-2"><canvas id="chart-0"></canvas></div>
+	</div>
+
+	<script>
+		var presets = window.chartColors;
+		var utils = Samples.utils;
+		var inputs = {
+			min: -10,
+			max: 10,
+			count: 8,
+			decimals: 2,
+			continuity: 1
+		};
+
+		function generateData(config) {
+			return utils.numbers(Chart.helpers.merge(inputs, config || {}));
+		}
+
+		function generateLabels(config) {
+			return utils.months(Chart.helpers.merge({
+				count: inputs.count,
+				section: 3
+			}, config || {}));
+		}
+
+		var options = {
+			maintainAspectRatio: false,
+            spanGaps: false,
+			elements: {
+				line: {
+					tension: 0.000001
+				}
+			},
+			plugins: {
+				filler: {
+					propagate: false
+				}
+			},
+			scales: {
+				xAxes: [{
+                    display: false,
+					ticks: {
+						autoSkip: false,
+						maxRotation: 0
+					}
+                }],
+                yAxes: [{
+                    display: false
+                }]
+            },
+            legend: {
+                display: false
+            },
+		};
+
+		['start'].forEach(function(boundary, index) {
+
+			// reset the random seed to generate the same data for all charts
+			utils.srand(8);
+
+			new Chart('chart-' + index, {
+				type: 'line',
+				data: {
+					labels: generateLabels(),
+					datasets: [{
+						backgroundColor: utils.transparentize(presets.blue),
+						borderColor: presets.blue,
+						data: generateData(),
+						label: 'Dataset',
+                        fill: 'start'
+					}]
+				},
+				options: Chart.helpers.merge(options, {
+					title: {
+						text: 'fill: ' + boundary,
+						display: false
+					}
+				})
+			});
+		});
+
+
+		function toggleSmooth(btn) {
+			var value = btn.classList.toggle('btn-on');
+			Chart.helpers.each(Chart.instances, function(chart) {
+				chart.options.elements.line.tension = value? 0.4 : 0.000001;
+				chart.update();
+			});
+		}
+
+		function randomize() {
+			var seed = utils.rand();
+			Chart.helpers.each(Chart.instances, function(chart) {
+				utils.srand(seed);
+
+				chart.data.datasets.forEach(function(dataset) {
+					dataset.data = generateData();
+				});
+
+				chart.update();
+			});
+		}
+	</script>
+</body>
+
+</html>
